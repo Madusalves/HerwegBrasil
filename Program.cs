@@ -17,6 +17,14 @@ builder.Services.AddSingleton<IEnderecoService, EnderecoService>();
 builder.Services.AddSingleton<IBancoService, BancoService>();
 builder.Services.AddSingleton<IBrasilApi, BrasilApiRest>();
 
+builder.Services.AddCors(option => option.AddDefaultPolicy(policy => 
+{ 
+    policy.AllowAnyOrigin();
+    policy.AllowAnyMethod();
+    policy.AllowAnyOrigin();
+
+
+}));
 
 
 builder.Services.AddAutoMapper(typeof(EnderecoMapping));
@@ -31,9 +39,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCors();
 
 app.MapControllers();
 
