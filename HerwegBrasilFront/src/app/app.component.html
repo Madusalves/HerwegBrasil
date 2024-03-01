@@ -1,3 +1,4 @@
-<p *ngFor="let endereco of enderecos$ | async">
-  {{ endereco.cep }}
+<p>
+  {{enderecos$ | async | json}}
 </p>
+

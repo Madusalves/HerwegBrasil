@@ -24,13 +24,17 @@ export class AppComponent implements OnInit {
   enderecos$: Observable<Endereco[]> = new Observable<Endereco[]>();
 
   ngOnInit(): void {
-    this.obterEndereco("37940000");
+    this.obterEndereco(this.enderecos$.toString());
   }
 
+  pesquisarEndereço() {
 
+  }
   obterEndereco(cep: string) {
     this.enderecos$ = this.http.get<Endereco[]>(`${this.urlApi}/api/cep/v1/${cep}`);
   }
+
+  
 }
 
 
