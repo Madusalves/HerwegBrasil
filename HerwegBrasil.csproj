@@ -23,4 +23,8 @@
     <TypeScriptCompile Include="HerwegBrasilFront\src\app\app.module.ts" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="HerwegBrasilFront\src\app\service\" />
+  </ItemGroup>
+
 </Project>

@@ -3,19 +3,26 @@ import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { AppRoutingModule } from './App-routing.module';
+import { EnderecoComponent } from './pages/endereco/endereco.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent
+    EnderecoComponent,
+    
 
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     CommonModule,
-    SearchBarComponent,
+    AppRoutingModule,
+    EnderecoComponent,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

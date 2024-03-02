@@ -1,3 +1,7 @@
 import { Routes } from '@angular/router';
+import { EnderecoComponent } from './pages/endereco/endereco.component';
 
-export const routes: Routes = [];
+const routes: Routes = [
+  { path: 'endereco', component: EnderecoComponent }
+];
+
